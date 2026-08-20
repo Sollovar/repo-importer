@@ -115,7 +115,7 @@ function Index() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.9, delay: 0.15 }}
-          className="hidden items-center gap-8 text-sm text-muted-foreground md:flex"
+          className="hidden items-center gap-8 text-sm text-foreground/60 md:flex"
         >
           {["Depth", "Routing", "Coverage", "Desk"].map((item) => (
             <a key={item} href="#platform" className="story-link transition-colors hover:text-foreground">
@@ -131,8 +131,8 @@ function Index() {
       {/* Hero */}
       <section ref={heroRef} className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-20 pt-10 sm:pt-16">
         <RetroGrid
-          className="-z-10 [mask-image:radial-gradient(90%_70%_at_50%_20%,#000,transparent)] text-muted-foreground"
-          opacity={0.28}
+          className="-z-10 [mask-image:radial-gradient(90%_70%_at_50%_20%,#000,transparent)] text-foreground/60"
+          opacity={0.5}
         />
         <motion.div style={{ opacity: heroFade }} className="grid gap-12 lg:grid-cols-[1.05fr_1fr] lg:items-center">
           <div>
@@ -141,7 +141,7 @@ function Index() {
               custom={0}
               initial="hidden"
               animate="show"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-cream/70 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground"
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-cream/70 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.18em] text-foreground/60"
             >
               Institutional order flow
             </motion.span>
@@ -166,7 +166,7 @@ function Index() {
               custom={4}
               initial="hidden"
               animate="show"
-              className="mt-6 max-w-md text-base leading-relaxed text-muted-foreground"
+              className="mt-6 max-w-md text-base leading-relaxed text-foreground/60"
             >
               Vellum streams raw depth from twenty-two venues into a single calm ladder — every
               resting bid, every thinning ask, at the speed the tape actually moves.
@@ -215,7 +215,7 @@ function Index() {
               className="relative text-center"
             >
               <div className="tabular text-2xl font-semibold sm:text-3xl">{s.value}</div>
-              <div className="mt-1.5 text-[11px] uppercase tracking-[0.14em] text-muted-foreground">
+              <div className="mt-1.5 text-[11px] uppercase tracking-[0.14em] text-foreground/60">
                 {s.label}
               </div>
             </motion.div>
@@ -239,7 +239,7 @@ function Index() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, ease }}
-              className="inline-flex items-center rounded-full border border-border bg-cream/70 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground"
+              className="inline-flex items-center rounded-full border border-border bg-cream/70 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.18em] text-foreground/60"
             >
               Long tail coverage
             </motion.span>
@@ -257,7 +257,7 @@ function Index() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease, delay: 0.12 }}
-              className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground"
+              className="mt-4 max-w-md text-sm leading-relaxed text-foreground/60"
             >
               DOGE to the newest launch — Vellum pulls thin, fast-moving meme liquidity into the same
               normalised ladder as majors, so you can size a fill before the crowd sees the wick.
@@ -301,7 +301,7 @@ function Index() {
                 <f.icon className="h-5 w-5" />
               </span>
               <h3 className="mt-5 text-base font-semibold">{f.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{f.body}</p>
+              <p className="mt-2 text-sm leading-relaxed text-foreground/60">{f.body}</p>
             </motion.article>
           ))}
         </div>
@@ -329,7 +329,7 @@ function Index() {
           <h2 className="relative font-display text-3xl leading-tight sm:text-4xl">
             Trade the book, not the candle.
           </h2>
-          <p className="relative mx-auto mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
+          <p className="relative mx-auto mt-4 max-w-md text-sm leading-relaxed text-foreground/60">
             Access is opened desk by desk. Tell us your venues and we'll provision a keyed terminal
             within a day.
           </p>
@@ -345,7 +345,7 @@ function Index() {
       </section>
 
       <footer className="relative z-10 mx-auto w-full max-w-6xl border-t border-border px-5 py-8">
-        <div className="flex flex-col items-center justify-between gap-4 text-xs text-muted-foreground sm:flex-row">
+        <div className="flex flex-col items-center justify-between gap-4 text-xs text-foreground/60 sm:flex-row">
           <div className="flex items-center gap-2">
             <img src={logoMark} alt="" width={20} height={20} loading="lazy" className="h-5 w-5" />
             <span>© 2026 Vellum Markets</span>
