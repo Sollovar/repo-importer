@@ -345,3 +345,9 @@
   background: linear-gradient(145deg, oklch(0.92 0.06 215), oklch(0.79 0.11 225));
   color: oklch(0.28 0.05 230);
 }
+
+@keyframes retro-grid-scroll {
+  to {
+    transform: translateY(calc(var(--retro-grid-cell) * 1px));
+  }
+}
