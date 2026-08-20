@@ -130,6 +130,10 @@ function Index() {
 
       {/* Hero */}
       <section ref={heroRef} className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-20 pt-10 sm:pt-16">
+        <RetroGrid
+          className="-z-10 [mask-image:radial-gradient(90%_70%_at_50%_20%,#000,transparent)] text-muted-foreground"
+          opacity={0.28}
+        />
         <motion.div style={{ opacity: heroFade }} className="grid gap-12 lg:grid-cols-[1.05fr_1fr] lg:items-center">
           <div>
             <motion.span
