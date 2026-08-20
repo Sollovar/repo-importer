@@ -6,6 +6,7 @@ import logoMark from "@/assets/logo-mark.png";
 import { CoinOrbit } from "@/components/landing/CoinOrbit";
 import { GlyphMatrix } from "@/components/landing/GlyphMatrix";
 import { OrderBook } from "@/components/landing/OrderBook";
+import { RetroGrid } from "@/components/landing/RetroGrid";
 import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/")({
