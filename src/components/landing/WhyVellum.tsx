@@ -100,11 +100,11 @@ function FeatureIcon({ icon: Icon }: { icon: typeof Globe }) {
 
 export function WhyVellum() {
   return (
-    <section className="dark relative overflow-hidden bg-background py-24 sm:py-32">
+    <section className="relative overflow-hidden bg-background py-24 sm:py-32">
       {/* Ambient glow */}
       <div
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-0 h-[28rem] w-[36rem] -translate-x-1/2 rounded-full bg-bronze/10 blur-[100px]"
+        className="pointer-events-none absolute left-1/2 top-0 h-[28rem] w-[36rem] -translate-x-1/2 rounded-full bg-bronze/15 blur-[100px]"
       />
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-5">
@@ -129,13 +129,15 @@ export function WhyVellum() {
           {/* Background order book mockup */}
           <div
             aria-hidden
-            className="pointer-events-none absolute inset-0 -top-8 flex justify-center opacity-20"
+            className="pointer-events-none absolute inset-x-0 -top-24 flex justify-center sm:-top-32"
           >
-            <OrderBookMockup />
+            <div className="w-full max-w-5xl scale-105 opacity-40">
+              <OrderBookMockup />
+            </div>
           </div>
 
           {/* Foreground features */}
-          <div className="relative z-10 mx-auto grid max-w-md gap-6">
+          <div className="relative z-10 mx-auto grid max-w-md gap-6 pt-16">
             {features.map((feature, i) => (
               <motion.div
                 key={feature.title}
@@ -143,7 +145,7 @@ export function WhyVellum() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.7, ease, delay: i * 0.1 }}
-                className="flex items-start gap-4 rounded-2xl border border-border/40 bg-card/40 p-4 backdrop-blur-md"
+                className="flex items-start gap-4 rounded-2xl border border-border/50 bg-card/70 p-4 shadow-soft backdrop-blur-md"
               >
                 <FeatureIcon icon={feature.icon} />
                 <div>
