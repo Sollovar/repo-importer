@@ -42,7 +42,7 @@ function OrderBookMockup() {
   ];
 
   return (
-    <div className="w-full max-w-5xl overflow-hidden rounded-2xl border border-border/40 bg-card/60 p-5 shadow-2xl">
+    <div className="w-full max-w-5xl overflow-hidden rounded-2xl border border-border/50 bg-cream/80 p-5 shadow-2xl">
       {/* Tabs */}
       <div className="flex items-center gap-1 border-b border-border/40 pb-3">
         {tabs.map((tab) => (
@@ -50,7 +50,7 @@ function OrderBookMockup() {
             key={tab}
             className={`rounded-md px-2.5 py-1 text-[10px] font-medium tracking-wide ${
               tab === "Order book"
-                ? "bg-secondary text-secondary-foreground"
+                ? "bg-primary text-primary-foreground"
                 : "text-muted-foreground"
             }`}
           >
@@ -91,8 +91,8 @@ function OrderBookMockup() {
 
 function FeatureIcon({ icon: Icon }: { icon: typeof Globe }) {
   return (
-    <div className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-card/80 backdrop-blur-sm">
-      <div className="absolute inset-0 rounded-xl border border-bronze/25 bg-gradient-to-br from-bronze/25 via-bronze/10 to-transparent" />
+    <div className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-cream/80 backdrop-blur-sm shadow-soft">
+      <div className="absolute inset-0 rounded-xl border border-bronze/40 bg-gradient-to-br from-bronze/20 via-bronze/10 to-transparent" />
       <Icon className="relative z-10 h-5 w-5 text-bronze" strokeWidth={1.8} />
     </div>
   );
@@ -100,11 +100,11 @@ function FeatureIcon({ icon: Icon }: { icon: typeof Globe }) {
 
 export function WhyVellum() {
   return (
-    <section className="dark relative overflow-hidden bg-background py-24 sm:py-32">
+    <section className="relative overflow-hidden bg-background py-24 sm:py-32">
       {/* Ambient glow */}
       <div
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-0 h-[28rem] w-[36rem] -translate-x-1/2 rounded-full bg-bronze/10 blur-[100px]"
+        className="pointer-events-none absolute left-1/2 top-0 h-[28rem] w-[36rem] -translate-x-1/2 rounded-full bg-bronze/15 blur-[100px]"
       />
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-5">
@@ -129,13 +129,15 @@ export function WhyVellum() {
           {/* Background order book mockup */}
           <div
             aria-hidden
-            className="pointer-events-none absolute inset-0 -top-8 flex justify-center opacity-20"
+            className="pointer-events-none absolute inset-x-0 -top-24 flex justify-center sm:-top-32"
           >
-            <OrderBookMockup />
+            <div className="w-full max-w-5xl scale-105 opacity-40">
+              <OrderBookMockup />
+            </div>
           </div>
 
           {/* Foreground features */}
-          <div className="relative z-10 mx-auto grid max-w-md gap-6">
+          <div className="relative z-10 mx-auto grid max-w-md gap-6 pt-16">
             {features.map((feature, i) => (
               <motion.div
                 key={feature.title}
@@ -143,7 +145,7 @@ export function WhyVellum() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.7, ease, delay: i * 0.1 }}
-                className="flex items-start gap-4 rounded-2xl border border-border/40 bg-card/40 p-4 backdrop-blur-md"
+                className="flex items-start gap-4 rounded-2xl border border-border/50 bg-card/70 p-4 shadow-soft backdrop-blur-md"
               >
                 <FeatureIcon icon={feature.icon} />
                 <div>
