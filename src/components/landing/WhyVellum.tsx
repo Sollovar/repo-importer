@@ -35,6 +35,10 @@ function OrderBookMockup() {
     { bidSize: "7.678", bidPrice: "79,862.3", askPrice: "79,871.4", askSize: "0.055" },
     { bidSize: "2.412", bidPrice: "79,861.2", askPrice: "79,871.9", askSize: "0.057" },
     { bidSize: "5.131", bidPrice: "79,860.5", askPrice: "79,872.1", askSize: "0.061" },
+    { bidSize: "3.842", bidPrice: "79,859.8", askPrice: "79,872.4", askSize: "0.064" },
+    { bidSize: "6.201", bidPrice: "79,859.1", askPrice: "79,873.0", askSize: "0.068" },
+    { bidSize: "1.504", bidPrice: "79,858.4", askPrice: "79,873.5", askSize: "0.072" },
+    { bidSize: "4.331", bidPrice: "79,857.7", askPrice: "79,874.2", askSize: "0.075" },
   ];
 
   return (
