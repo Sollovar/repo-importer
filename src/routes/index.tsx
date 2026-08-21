@@ -224,6 +224,8 @@ function Index() {
         </div>
       </section>
 
+      <WhyVellum />
+
       {/* Meme coin orbit */}
       <section className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-24">
         <div className="glass-cream relative grid items-center gap-10 overflow-hidden rounded-3xl px-6 py-12 sm:px-10 lg:grid-cols-[1fr_1.1fr]">
