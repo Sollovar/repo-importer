@@ -27,18 +27,18 @@ const features = [
 ];
 
 function OrderBookMockup() {
-  const tabs = ["Chart", "Order book", "Trades", "Depth", "Details"];
+  const tabs = ["Chart", "Order Book", "Trades", "Depth", "Details"];
   const rows = [
-    { bidSize: "1.131", bidPrice: "79,863.2", askPrice: "79,863.3", askSize: "0.002" },
-    { bidSize: "1.956", bidPrice: "79,863.1", askPrice: "79,868.2", askSize: "0.052" },
-    { bidSize: "1.952", bidPrice: "79,862.1", askPrice: "79,870.4", askSize: "0.053" },
-    { bidSize: "7.678", bidPrice: "79,862.3", askPrice: "79,871.4", askSize: "0.055" },
-    { bidSize: "2.412", bidPrice: "79,861.2", askPrice: "79,871.9", askSize: "0.057" },
-    { bidSize: "5.131", bidPrice: "79,860.5", askPrice: "79,872.1", askSize: "0.061" },
-    { bidSize: "3.842", bidPrice: "79,859.8", askPrice: "79,872.4", askSize: "0.064" },
-    { bidSize: "6.201", bidPrice: "79,859.1", askPrice: "79,873.0", askSize: "0.068" },
-    { bidSize: "1.504", bidPrice: "79,858.4", askPrice: "79,873.5", askSize: "0.072" },
-    { bidSize: "4.331", bidPrice: "79,857.7", askPrice: "79,874.2", askSize: "0.075" },
+    { bidSize: "167.34K", bidPrice: "64,838.1", askPrice: "64,838.2", askSize: "35.33K" },
+    { bidSize: "262.85K", bidPrice: "64,837.9", askPrice: "64,839.8", askSize: "36.30K" },
+    { bidSize: "282.95K", bidPrice: "64,837.2", askPrice: "64,840.8", askSize: "57.31K" },
+    { bidSize: "473.44K", bidPrice: "64,836.8", askPrice: "64,840.9", askSize: "77.02K" },
+    { bidSize: "498.40K", bidPrice: "64,836.6", askPrice: "64,841.0", askSize: "101.99K" },
+    { bidSize: "523.36K", bidPrice: "64,836.5", askPrice: "64,841.1", askSize: "126.95K" },
+    { bidSize: "543.46K", bidPrice: "64,835.9", askPrice: "64,841.6", askSize: "147.31K" },
+    { bidSize: "600.32K", bidPrice: "64,835.2", askPrice: "64,841.7", askSize: "196.72K" },
+    { bidSize: "620.42K", bidPrice: "64,835.0", askPrice: "64,841.8", askSize: "228.30K" },
+    { bidSize: "790.80K", bidPrice: "64,832.9", askPrice: "64,842.2", askSize: "435.73K" },
   ];
 
   return (
@@ -49,26 +49,24 @@ function OrderBookMockup() {
           <span
             key={tab}
             className={`rounded-md px-2.5 py-1 text-[10px] font-medium tracking-wide ${
-              tab === "Order book"
-                ? "bg-primary text-primary-foreground"
-                : "text-muted-foreground"
+              tab === "Order Book" ? "text-foreground" : "text-muted-foreground"
             }`}
           >
             {tab}
           </span>
         ))}
         <span className="ml-auto flex items-center gap-2 text-[10px] text-muted-foreground">
-          <span>0.1 ▾</span>
-          <span>BTC ▾</span>
+          <span>0.1</span>
+          <span>USDT</span>
         </span>
       </div>
 
       {/* Header */}
       <div className="mt-3 grid grid-cols-[1fr_1fr_1fr_1fr] gap-2 text-[10px] uppercase tracking-wider text-muted-foreground">
-        <span>Size (BTC)</span>
+        <span>Total (USDT)</span>
         <span className="text-right">Price (USDT)</span>
-        <span className="text-left">Price (USD)</span>
-        <span className="text-right">Size (BTC)</span>
+        <span className="text-left">Price (USDT)</span>
+        <span className="text-right">Total (USDT)</span>
       </div>
 
       {/* Rows */}
