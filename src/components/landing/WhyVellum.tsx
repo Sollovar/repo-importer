@@ -117,9 +117,6 @@ export function WhyVellum() {
           <h2 className="font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
             Why Vellum
           </h2>
-          <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
-            A terminal built for traders who read the book first.
-          </p>
         </motion.div>
 
         {/* Content stack */}
