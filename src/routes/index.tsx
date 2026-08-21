@@ -4,8 +4,8 @@ import { useRef } from "react";
 import { ArrowUpRight, Gauge, Layers, Radio, ShieldCheck, Waves } from "lucide-react";
 import logoMark from "@/assets/logo-mark.png";
 import { CoinOrbit } from "@/components/landing/CoinOrbit";
+import { Globe } from "@/components/landing/Globe";
 import { GlyphMatrix } from "@/components/landing/GlyphMatrix";
-import { OrderBook } from "@/components/landing/OrderBook";
 import { RetroGrid } from "@/components/landing/RetroGrid";
 import { Button } from "@/components/ui/button";
 
@@ -191,7 +191,7 @@ function Index() {
             </motion.div>
           </div>
 
-          <OrderBook />
+          <Globe />
         </motion.div>
       </section>
 
