@@ -42,7 +42,7 @@ function OrderBookMockup() {
   ];
 
   return (
-    <div className="w-full max-w-2xl overflow-hidden rounded-2xl border border-border/40 bg-card/60 p-4 shadow-2xl">
+    <div className="w-full max-w-5xl overflow-hidden rounded-2xl border border-border/40 bg-card/60 p-5 shadow-2xl">
       {/* Tabs */}
       <div className="flex items-center gap-1 border-b border-border/40 pb-3">
         {tabs.map((tab) => (
