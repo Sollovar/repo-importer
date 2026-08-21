@@ -42,7 +42,7 @@ function OrderBookMockup() {
   ];
 
   return (
-    <div className="w-full max-w-5xl overflow-hidden rounded-2xl border border-border/40 bg-card/60 p-5 shadow-2xl">
+    <div className="w-full max-w-5xl overflow-hidden rounded-2xl border border-border/50 bg-cream/80 p-5 shadow-2xl">
       {/* Tabs */}
       <div className="flex items-center gap-1 border-b border-border/40 pb-3">
         {tabs.map((tab) => (
@@ -50,7 +50,7 @@ function OrderBookMockup() {
             key={tab}
             className={`rounded-md px-2.5 py-1 text-[10px] font-medium tracking-wide ${
               tab === "Order book"
-                ? "bg-secondary text-secondary-foreground"
+                ? "bg-primary text-primary-foreground"
                 : "text-muted-foreground"
             }`}
           >
@@ -91,8 +91,8 @@ function OrderBookMockup() {
 
 function FeatureIcon({ icon: Icon }: { icon: typeof Globe }) {
   return (
-    <div className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-card/80 backdrop-blur-sm">
-      <div className="absolute inset-0 rounded-xl border border-bronze/25 bg-gradient-to-br from-bronze/25 via-bronze/10 to-transparent" />
+    <div className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-cream/80 backdrop-blur-sm shadow-soft">
+      <div className="absolute inset-0 rounded-xl border border-bronze/40 bg-gradient-to-br from-bronze/20 via-bronze/10 to-transparent" />
       <Icon className="relative z-10 h-5 w-5 text-bronze" strokeWidth={1.8} />
     </div>
   );
