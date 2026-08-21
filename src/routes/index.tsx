@@ -7,6 +7,7 @@ import { CoinOrbit } from "@/components/landing/CoinOrbit";
 import { Globe } from "@/components/landing/Globe";
 import { GlyphMatrix } from "@/components/landing/GlyphMatrix";
 import { RetroGrid } from "@/components/landing/RetroGrid";
+import { WhyVellum } from "@/components/landing/WhyVellum";
 import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/")({
@@ -222,6 +223,8 @@ function Index() {
           ))}
         </div>
       </section>
+
+      <WhyVellum />
 
       {/* Meme coin orbit */}
       <section className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-24">
