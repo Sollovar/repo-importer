@@ -44,22 +44,30 @@ export function Globe({ className = "" }: { className?: string }) {
       markerColor: [0.35, 0.62, 0.44],
       glowColor: [0.98, 0.96, 0.92],
       markers: MARKERS,
-      onRender: (state) => {
-        if (pointer.current === null) phi.current += 0.0035;
-        state.phi = phi.current + drag.current;
-        state.width = width * 2;
-        state.height = width * 2;
-      },
     });
+
+    let raf = 0;
+    const loop = () => {
+      if (pointer.current === null) phi.current += 0.0035;
+      globe.update({
+        phi: phi.current + drag.current,
+        width: width * 2,
+        height: width * 2,
+      });
+      raf = requestAnimationFrame(loop);
+    };
+    raf = requestAnimationFrame(loop);
 
     requestAnimationFrame(() => {
       canvas.style.opacity = "1";
     });
 
     return () => {
+      cancelAnimationFrame(raf);
       globe.destroy();
       window.removeEventListener("resize", onResize);
     };
+
   }, []);
 
   const startDrag = (clientX: number) => {
