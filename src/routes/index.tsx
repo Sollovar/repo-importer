@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { ArrowUpRight, Gauge, Layers, Radio, ShieldCheck, Waves } from "lucide-react";
 import logoMark from "@/assets/logo-mark.png";
 import { CoinOrbit } from "@/components/landing/CoinOrbit";
+import { Footer } from "@/components/landing/Footer";
 import { Globe } from "@/components/landing/Globe";
 import { GlyphMatrix } from "@/components/landing/GlyphMatrix";
 import { RetroGrid } from "@/components/landing/RetroGrid";
@@ -347,15 +348,7 @@ function Index() {
         </motion.div>
       </section>
 
-      <footer className="relative z-10 mx-auto w-full max-w-6xl border-t border-border px-5 py-8">
-        <div className="flex flex-col items-center justify-between gap-4 text-xs text-foreground/60 sm:flex-row">
-          <div className="flex items-center gap-2">
-            <img src={logoMark} alt="" width={20} height={20} loading="lazy" className="h-5 w-5" />
-            <span>© 2026 Vellum Markets</span>
-          </div>
-          <span>Market data is indicative. Not investment advice.</span>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }
