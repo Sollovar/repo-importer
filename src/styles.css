@@ -65,6 +65,7 @@
   --color-cream: var(--cream);
   --color-sand: var(--sand);
   --color-sand-deep: var(--sand-deep);
+  --color-bronze: var(--bronze);
   --font-display: var(--font-display);
   --font-sans: var(--font-body);
   --font-mono: var(--font-mono-num);
@@ -103,6 +104,8 @@
   --cream: oklch(0.975 0.014 88);
   --sand: oklch(0.905 0.031 82.5);
   --sand-deep: oklch(0.855 0.038 78);
+  --bronze: oklch(0.72 0.09 65);
+  --bronze-foreground: oklch(0.2 0.02 65);
 
   --gradient-sand: linear-gradient(
     170deg,
@@ -156,6 +159,8 @@
   --destructive-foreground: oklch(0.984 0.003 247.858);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
+  --bronze: oklch(0.72 0.09 65);
+  --bronze-foreground: oklch(0.2 0.02 65);
   --ring: oklch(0.551 0.027 264.364);
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
